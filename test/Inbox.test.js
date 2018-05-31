@@ -48,5 +48,6 @@ describe('Inbox', () => {
         await inbox.methods.setMessage(NEW_MES).send({ from: accounts[0] });
         const message = await inbox.methods.message().call();
         assert.equal(message, NEW_MES);
-    })
+    });
 })
+
