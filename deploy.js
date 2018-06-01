@@ -18,7 +18,7 @@ const deploy = async () => {
     console.log('see here --->', accounts[0]);
     const result = await new web3.eth.Contract(JSON.parse(interface))
         //important: throws an error if a hex indicator '0x' is not added 
-        .deploy({ data: '0x' + bytecode, arguments: ['Hi there!'] })
+        .deploy({ data: '0x' + bytecode })
         .send({ gas: 1000000, from: accounts[0] });
 
     console.log('address of deployed contract', result.options.address);
